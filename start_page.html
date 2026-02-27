@@ -31,6 +31,15 @@
         color: var(--base-font-color);
       
       }
+      
+      a, a:visited {
+        color: var(--c-magenta);
+      }
+      a:hover, a:focus {
+        color: var(--c-orange);
+        text-decoration: underline;
+      }
+      
     </style>
 
   </head>
@@ -42,9 +51,32 @@
 
     <header>
       <h1>Header</h1>
+      <style>
+        header {
+          background-color: var(--c-background-highlights, rgb(7,54,66));
+          color: var(--c-yellow);
+          font-family: 'Sonsie One', cursive;
+          text-align: center;
+        }
+      </style>
     </header>
 
     <nav>
+      <style>
+        nav {
+          background-color: var(--c-background-highlights, rgb(7,54,66));
+          color: var(--c-green);
+          padding: 1em;
+        }
+        nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 1em;
+          
+        }
+      </style>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Our team</a></li>
@@ -62,10 +94,35 @@
 
     <!-- Here is our page's main content -->
     <main>
-
+        <style>
+          main {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          article {
+            flex: 1 1 60%;
+          }
+          aside {
+            flex: 1 1 30%;
+            background-color: var(--c-background-highlights, rgb(7,54,66));
+            color: var(--c-green);
+            padding: 1em;
+          }
+        </style>
       <!-- It contains an article -->
-      <article>
+      <article> 
+        <style>
+          .cyan-border {
+        border: 3px solid var(--c-cyan);
+        padding: 0.75rem;
+        box-sizing: border-box;
+      }
+    </style>
+
+      <article class="cyan-border"> 
         <h2>Article heading</h2>
+        </style>
+        
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
 
