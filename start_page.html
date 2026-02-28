@@ -40,7 +40,6 @@
         text-decoration: underline;
       }
       
-
     </style>
 
   </head>
@@ -52,7 +51,7 @@
 
     <header>
       <h1>Header</h1>
-    <style>
+      <style>
         header {
           background-color: var(--c-background-highlights, rgb(7,54,66));
           color: var(--c-yellow);
@@ -78,7 +77,6 @@
           
         }
       </style>
-
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Our team</a></li>
@@ -96,21 +94,7 @@
 
     <!-- Here is our page's main content -->
     <main>
-        <style>
-          main {
-            display: flex;
-            flex-wrap: wrap;
-          }
-          article {
-            flex: 1 1 60%;
-          }
-          aside {
-            flex: 1 1 30%;
-            background-color: var(--c-background-highlights, rgb(7,54,66));
-            color: var(--c-green);
-            padding: 1em;
-          }
-        </style>
+       
       <!-- It contains an article -->
       <article> 
         <style>
@@ -142,7 +126,17 @@
       </article>
 
       <!-- the aside content can also be nested within the main content -->
-      <aside>
+      <aside> 
+    <style>
+      aside {
+        float: right;
+        width: 30%;
+        background-color: var(--c-background-highlights, rgb(7,54,66));
+        padding: 1em;
+        box-sizing: border-box;
+        margin-left: 1em;
+      }
+    </style>
         <h2>Related</h2>
 
         <ul>
