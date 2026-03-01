@@ -33,7 +33,7 @@
       }
       
       a, a:visited {
-        color: var(--c-magenta);
+        color: var(--c-blue);
       }
       a:hover, a:focus {
         color: var(--c-orange);
@@ -56,6 +56,7 @@
           background-color: var(--c-background-highlights, rgb(7,54,66));
           color: var(--c-yellow);
           font-family: 'Sonsie One', cursive;
+          font-size: x-large;
           text-align: center;
         }
       </style>
@@ -65,24 +66,30 @@
       <style>
         nav {
           background-color: var(--c-background-highlights, rgb(7,54,66));
-          color: var(--c-green);
-          padding: 1em;
+          color: var(--c-green); 
+          font-size: larger;
+          padding: 0.5em;
+          text-align: center;
+          gap: 20px;
+        
         }
         nav ul {
+          flex-wrap: wrap;
           list-style-type: none;
-          margin: 0;
-          padding: 0;
+          margin: 10px;
+          padding: 20px;
           display: flex;
-          gap: 1em;
+          gap: 30px;
           
         }
       </style>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <div class="topnav-centered">
+    <a href="#home" class="active">Home</a>
+    <a href="#our-team">Our team</a>
+    <a href="#projects">Projects</a> 
+    <a href="#contact">Contact</a>
+  </div>
+      
 
        <!-- A Search form is another common non-linear way to navigate through a website. -->
 
@@ -98,15 +105,24 @@
       <!-- It contains an article -->
       <article> 
         <style>
-          .cyan-border {
-        border: 3px solid var(--c-cyan);
-        padding: 0.75rem;
-        box-sizing: border-box;
-      }
-    </style>
-
+          .article-content {
+            float: left;
+            width: 70%;
+            background-color: var(--c-background-highlights, rgb(7,54,66));
+            padding: 0em;
+            box-sizing: border-box;
+            margin-right: 1em;
+          }
+          
+        </style>
+        <div class="article-content">
+       
       <article class="cyan-border"> 
         <h2>Article heading</h2>
+        <style>
+        article {
+          padding: 1em;
+        }
         </style>
         
 
@@ -127,17 +143,57 @@
 
       <!-- the aside content can also be nested within the main content -->
       <aside> 
-    <style>
+
+        <div class="aside-content">
+          <style> 
+            .heading-green {
+              color: var(--c-green);
+            }
+          </style>
+        <h2 class="heading-green">Related</h2>
+        </div>
+        <style>
+          .cyan-border {
+        border: 3px solid var(--c-cyan);
+        padding: 0.75rem;
+        box-sizing: border-box; 
+      }
+      .aside-content {
+           
+            width: 30%;
+            padding: 0%;
+            box-sizing: border-box;
+            margin-right: 1em;
+          }
       aside {
         float: right;
         width: 30%;
-        background-color: var(--c-background-highlights, rgb(7,54,66));
         padding: 1em;
         box-sizing: border-box;
-        margin-left: 1em;
+        margin-right: 1em;
       }
+        aside h2 {
+          color: var(--c-green);
+        }
+        aside ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        aside li {
+          margin-bottom: 0.5em;
+        }
+          aside a, aside a:visited {
+            color: var(--c-red);
+          }
+          aside a:hover, aside a:focus {
+            color: var(--c-green);
+            text-decoration: underline;
+          }
+          
+         
+        
     </style>
-        <h2>Related</h2>
+       
 
         <ul>
           <li><a href="#">Oh I do like to be beside the seaside</a></li>
@@ -153,6 +209,16 @@
     <!-- And here is our main footer that is used across all the pages of our website -->
 
     <footer>
+      <style> 
+        footer {
+          background-color: var(--c-background-highlights, rgb(7,54,66));
+          color: var(--c-secondary-font-color);
+          font-size: smaller;
+          text-align: left;
+          padding: 1em;
+          float: left;
+        }
+      </style>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
 
