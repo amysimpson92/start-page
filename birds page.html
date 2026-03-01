@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birds javascript page</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+    :root
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        font-family: Arial, sans-serif;
+        --primary-color: rgb(14, 37, 72);
+        --secondary-color: rgb(0, 0, 0);
+        --base-bg-color: rgb(40, 100, 160);
+        --base-font-color: rgb(255, 255, 255);
+        --heading-color: rgb(255, 255, 255);
+    }
+
+        [data-theme="dark"] {
+            --primary-color: rgb(86, 86, 86);
+            --secondary-color: rgb(47, 47, 47);
+            --base-bg-color: rgb(0, 0, 0);
+            --base-font-color: rgb(255, 255, 255);
+            --heading-color: rgb(255, 255, 255);
+        }
+body{
+    background-color: var(--base-bg-color);
+    color: var(--base-font-color);
+}
+
+</style>
+</head>
+<body>
+    <style>
+        #showBird {
+            background-color: var(--primary-color);
+            color: var(--base-font-color);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #showBird:hover {
+            background-color: var(--secondary-color);
+        }
+
+        #birdContainer {
+            margin-top: 20px;
+        }
+    </style>
+    <h1>Birds</h1>
+    <style>
+        h1 {
+            background-color: var(--primary-color);
+            color: var(--heading-color);
+            font-size: xx-large;
+            font-family: 'Arial Black', Arial, sans-serif;
+            text-align: center;
+
+        }
+    </style>
+    
+   <style>
+    button {
+        background-color: var(--primary-color);
+        color: var(--base-font-color);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+   </style>
+   
+
+    <style>
+        #picture { display: block; width: 300px; }
+        .innerHTML { margin-top: 10px; }
+        .innerHTML p { font-size: 20px; color: var(--base-font-color); }
+        
+
+    </style>
+    <img id="picture" src="http://www.outgrabe.net/bird00.jpg" alt="pardalote by fir0002 (CC-by-NC)" style="width: 500px; height: auto; margin-top: 10px; padding: 5px;">
+
+    <button id="btnPardalote">Pardalote</button>
+    <button id="btnPurpleSwamphen">Purple Swamphen</button>
+    <button id="btnWhiteHeadedStilt">White Headed Stilt</button>
+    <button id="btnInlandThornbill">Inland Thornbill</button>
+    <button id="btnRoseRobin">Rose Robin</button>
+
+    
+    <script>
+        const img = document.getElementById('picture');
+        const images = [
+            'http://www.outgrabe.net/bird00.jpg',
+            'http://www.outgrabe.net/bird01.jpg',
+            'http://www.outgrabe.net/bird02.jpg',
+            'http://www.outgrabe.net/bird03.jpg',
+            'http://www.outgrabe.net/bird04.jpg'
+        ];
+        let index = 0;
+        document.getElementById('btnPardalote').addEventListener('click', () => {
+            img.src = images[0];
+            img.style.display = 'block';
+            document.querySelector('p').innerHTML = '<p>Pardalotes by fir0002 (CC-by-NC)</p>';
+        });
+
+        document.getElementById('btnPurpleSwamphen').addEventListener('click', () => {
+            img.src = images[1];
+            img.style.display = 'block';
+                document.querySelector('p').innerHTML = '<p>Purple swamp hen by Toby Hudson (CC-by-SA)</p>';
+        });
+
+        document.getElementById('btnWhiteHeadedStilt').addEventListener('click', () => {
+            img.src = images[2];
+            img.style.display = 'block';
+            document.querySelector('p').innerHTML = '<p>White Headed Stilt by JJ Harrison (CC-by-SA)</p>';
+        });
+
+        document.getElementById('btnInlandThornbill').addEventListener('click', () => {
+            img.src = images[3];
+            img.style.display = 'block';
+            document.querySelector('p').innerHTML = '<p>Inland Thornbill by Peter Jacobs (CC-by-SA)</p >';
+        });
+
+        document.getElementById('btnRoseRobin').addEventListener('click', () => {
+            img.src = images[4];
+            img.style.display = 'block';
+            document.querySelector('p').innerHTML = '<p>Rose Robin by JJ Harrison (CC-by-SA)</p>';
+        });
+    </script>
+    <style>
+        .innerHTML {
+            margin-top: 10px;
+        }
+        .innerHTML p {
+            font-size: 20px;
+            color: var(--base-font-color);
+        }
+        .innerHTML p:hover {
+            color: var(--secondary-color);
+        }
+        .innerHTML p:active {
+            color: var(--primary-color);
+        }
+        .innerHTML p:focus {
+            color: var(--primary-color);
+        }
+    </style>
+    <style>
+        .text-size-20 {
+            font-size: 20px;
+        }
+        .text-color-base {
+            color: var(--base-font-color);
+        }
+        .text-background-color-primary {
+            background-color: var(--primary-color);
+            padding: 5px;
+            
+        }
+
+    </style>
+    <div class="innerHTML"></div>
+    <p class="text-size-20 text-color-base text-background-color-primary">Australian Birds</p>
+    <button id="showBird">Change Theme</button>
+    <div id="birdContainer"></div>
+
+    <script src="script.js"></script> 
+    <script>
+        function changetheme() {
+            var c = document.querySelector(':root');
+
+            if (isrootDark) {
+                c.setAttribute('data-theme', 'light');
+                isrootDark = false;
+            } else {
+                c.setAttribute('data-theme', 'dark');
+                isrootDark = true;
+            }
+        }
+        
+        const button = document.getElementById('showBird');
+        button.addEventListener('click', changetheme);
+        let isrootDark = false;
+    </script>
+</body>
+</html>

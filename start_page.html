@@ -105,27 +105,28 @@
       <!-- It contains an article -->
       <article> 
         <style>
-          .article-content {
-            float: left;
-            width: 70%;
-            background-color: var(--c-background-highlights, rgb(7,54,66));
-            padding: 0em;
-            box-sizing: border-box;
-            margin-right: 1em;
+          article{
+            position: fixed;
+            left: 15px;
+            width: 80%;
+            
           }
+         
           
         </style>
         <div class="article-content">
+          <style>
+            .article-content {
+              padding: 1em;
+              box-sizing: border-box;
+              font-size: larger;
+            }
+          </style>
        
       <article class="cyan-border"> 
         <h2>Article heading</h2>
-        <style>
-        article {
-          padding: 1em;
-        }
-        </style>
         
-
+      
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
 
         <h3>Subsection</h3>
@@ -146,79 +147,84 @@
 
         <div class="aside-content">
           <style> 
+          aside{
+            position:fixed;
+            right: 10px;
+            width: 50px;
+
+            
+          }
+          
             .heading-green {
               color: var(--c-green);
+              
             }
           </style>
         <h2 class="heading-green">Related</h2>
         </div>
         <style>
+          
           .cyan-border {
         border: 3px solid var(--c-cyan);
         padding: 0.75rem;
         box-sizing: border-box; 
       }
-      .aside-content {
-           
-            width: 30%;
-            padding: 0%;
-            box-sizing: border-box;
-            margin-right: 1em;
-          }
+     
       aside {
         float: right;
-        width: 30%;
+        width: 200px;
         padding: 1em;
         box-sizing: border-box;
         margin-right: 1em;
+      
       }
-        aside h2 {
-          color: var(--c-green);
-        }
-        aside ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        aside li {
-          margin-bottom: 0.5em;
-        }
           aside a, aside a:visited {
             color: var(--c-red);
           }
-          aside a:hover, aside a:focus {
-            color: var(--c-green);
-            text-decoration: underline;
-          }
-          
-         
+        aside a:hover, aside a:focus {
+          color: var(--c-green);
+          text-decoration: underline;
+        }
         
-    </style>
-       
+      </style>
+     
 
-        <ul>
-          <li><a href="#">Oh I do like to be beside the seaside</a></li>
-          <li><a href="#">Oh I do like to be beside the sea</a></li>
-          <li><a href="#">Although in the North of England</a></li>
-          <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
-        </ul>
-      </aside>
-
+      <ul>
+        <li><a href="#">Oh I do like to be beside the seaside</a></li>
+        <li><a href="#">Oh I do like to be beside the sea</a></li>
+        <li><a href="#">Although in the North of England</a></li>
+        <li><a href="#">It never stops raining</a></li>
+        <li><a href="#">Oh well...</a></li>
+      </ul>
+    </aside>
+        
     </main>
 
     <!-- And here is our main footer that is used across all the pages of our website -->
 
     <footer>
+      <div class="footer-content">
+
+      </div> 
+      
+    <footer>
+      <div class="footer-content">
+
+      </div> 
       <style> 
+
         footer {
-          background-color: var(--c-background-highlights, rgb(7,54,66));
-          color: var(--c-secondary-font-color);
-          font-size: smaller;
-          text-align: left;
-          padding: 1em;
-          float: left;
+          position: fixed;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: var(--c-background-highlights, rgb(7,54,66));
+          color: #fff;
+          padding: 1rem;
         }
+        
       </style>
+      
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
 
